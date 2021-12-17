@@ -9,9 +9,9 @@ app = Flask(__name__)
 CORS(app)
 mysql = MySQL(cursorclass=DictCursor)
 
-app.config['MYSQL_DATABASE_USER'] = 'b126f6df5891b0'
-app.config['MYSQL_DATABASE_PASSWORD'] = '31d19778'
-app.config['MYSQL_DATABASE_DB'] = 'heroku_11da427d1c61507'
+app.config['MYSQL_DATABASE_USER'] = 'b68cef34044509'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'ac42c229'
+app.config['MYSQL_DATABASE_DB'] = 'heroku_7958580bc9bdd70'
 app.config['MYSQL_DATABASE_HOST'] = 'us-cdbr-east-05.cleardb.net'
 
 mysql.init_app(app)
