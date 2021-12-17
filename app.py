@@ -2,15 +2,17 @@ from math import radians, sin, cos, asin, sqrt
 
 from flask import Flask, request, jsonify
 from flaskext.mysql import MySQL
+from flask_cors import CORS
 from pymysql.cursors import DictCursor
 
 app = Flask(__name__)
+CORS(app)
 mysql = MySQL(cursorclass=DictCursor)
 
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'dfs_airports'
-app.config['MYSQL_DATABASE_HOST'] = '127.0.0.1'
+app.config['MYSQL_DATABASE_USER'] = 'b126f6df5891b0'
+app.config['MYSQL_DATABASE_PASSWORD'] = '31d19778'
+app.config['MYSQL_DATABASE_DB'] = 'heroku_11da427d1c61507'
+app.config['MYSQL_DATABASE_HOST'] = 'us-cdbr-east-05.cleardb.net'
 
 mysql.init_app(app)
 

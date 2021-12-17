@@ -1,12 +1,11 @@
-FROM python:3.8
+FROM python:3.9
 
-RUN pip install Flask==2.0.2
-RUN pip install flask-mysql==1.5.2
-RUN pip install PyMySQL==0.10.0
-
+RUN pip install --upgrade pip
 
 WORKDIR /dfs-co2emission
 COPY . /dfs-co2emission
+
+RUN pip install -r requirements.txt
 
 ENV FLASK_APP=app.py
 
