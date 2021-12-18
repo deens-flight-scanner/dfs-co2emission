@@ -2,11 +2,11 @@ FROM python:3.9
 
 RUN pip install --upgrade pip
 
-WORKDIR /dfs-co2emission
-COPY . /dfs-co2emission
+WORKDIR /app
+COPY . /app
 
 RUN pip install -r requirements.txt
 
-ENV FLASK_APP=app.py
+ENTRYPOINT [ "python" ]
 
-CMD ["flask", "run", "--host", "0.0.0.0"]
+CMD [ "app.py" ]

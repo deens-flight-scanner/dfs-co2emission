@@ -1,3 +1,6 @@
+
+import os
+
 from math import radians, sin, cos, asin, sqrt
 
 from flask import Flask, request, jsonify
@@ -89,7 +92,9 @@ def calculate_co2():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    # app.run(debug=False)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host = '0.0.0.0', port = port)
 
 # if __name__ == '__main__':
 #     conn = mysql.connect()
