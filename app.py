@@ -70,7 +70,7 @@ def calculate_co2():
         difference_in_lon / 2) ** 2))  # radius of earth in kilometers = 6371
 
     # calculate average time of the flight from departure to arrival
-    avg_time = distance * 850  # avg of 850 km/h in typical commercial passenger jet
+    avg_time = distance / 850  # avg of 850 km/h in typical commercial passenger jet
 
     # calculate the amount of emission for the flight
     co2_emission = avg_time * 134  # kg CO2 per hour kg -> UK DfT source
